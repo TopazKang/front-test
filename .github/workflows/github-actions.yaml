@@ -37,10 +37,10 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}
 
     - name: Build Docker image
-      run: docker build -t ghcr.io/topazkang/fe-deploy-prac:latest .
+      run: docker build -t ghcr.io/topazkang/test-fe:latest .
 
     - name: Push Docker image to GHCR
-      run: docker push ghcr.io/topazkang/fe-deploy-prac:latest
+      run: docker push ghcr.io/topazkang/test-fe:latest
 
     - name: SSH and Deploy Frontend
       uses: appleboy/ssh-action@v0.1.8
